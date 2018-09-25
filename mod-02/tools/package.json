@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "webpack": "webpack",
+    "eslint": "eslint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Maurice de Beijer",
@@ -16,6 +17,9 @@
     "@babel/core": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
     "babel-loader": "^8.0.2",
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
     "webpack": "^4.20.0",
     "webpack-cli": "^3.1.1"
   }

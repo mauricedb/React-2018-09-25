@@ -7,6 +7,8 @@ export default class Person extends Component {
   }
 
   greet() {
-    console.log(`Hello ${this.firstName}`);
+    if (this.firstName === '') {
+      console.log(`Hello ${this.firstName}`);
+    }
   }
 }
