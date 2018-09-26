@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-class Greeter extends Component {
+class Greeter extends PureComponent {
   render() {
     const { firstName } = this.props;
 
-    // console.count('Greeter.render');
+    console.count('Greeter.render');
 
     return <div> Hello {firstName}</div>;
   }

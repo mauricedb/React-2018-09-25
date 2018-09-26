@@ -5,10 +5,16 @@ class Counter extends Component {
   state = {
     value: 0
   };
+  dummy = { x: 1 };
 
   onClick = () => {
-    this.setState({ value: this.state.value + 1 });
+    this.setState(oldState => ({ value: oldState.value + 1 }));
+    this.setState(oldState => ({ value: oldState.value + 1 }));
   };
+
+  shouldComponentUpdate(newProps, newState) {
+    return this.state.value !== newState.value;
+  }
 
   render() {
     const { value } = this.state;
@@ -16,8 +22,7 @@ class Counter extends Component {
     return (
       <div>
         Value: {value} <button onClick={this.onClick}>Increment</button>
-        <Greeter />
-        <Greeter firstName="Maurice" />
+        <Greeter firstName="Maurice" dummy={this.dummy} />
       </div>
     );
   }
