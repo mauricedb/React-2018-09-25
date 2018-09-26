@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
+import { subtractValueLater } from '../actions';
 
 class Subtract extends Component {
   onClick = () => {
-    const { value } = this.props;
+    const { value, dispatchSubtractValue } = this.props;
+    dispatchSubtractValue(value);
   };
   render() {
     const { value } = this.props;
@@ -10,4 +14,15 @@ class Subtract extends Component {
   }
 }
 
-export default Subtract;
+function mapDispatchToProps(dispatch) {
+  return {
+    dispatchSubtractValue(value) {
+      const action = subtractValueLater(value);
+      dispatch(action);
+    }
+  };
+}
+export default connect(
+  null,
+  mapDispatchToProps
+)(Subtract);

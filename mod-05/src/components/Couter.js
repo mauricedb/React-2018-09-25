@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 
+import { connect } from 'react-redux';
+
 class Couter extends Component {
-    render() {
-        return (
-            <div>
-                The value is: 0
-            </div>
-        );
-    }
+  render() {
+    const { value } = this.props;
+    
+    return <div>The value is: {value}</div>;
+  }
 }
 
-export default Couter;
+function mapStateToProps(state) {
+  return {
+    value: state.value
+  };
+}
+
+export default connect(mapStateToProps)(Couter);
