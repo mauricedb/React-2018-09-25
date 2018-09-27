@@ -1,0 +1,14 @@
+{
+  "name": "mod-10",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "live-server --ignorePattern=.ts",
+    "tsc": "tsc"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.0",
+    "typescript": "^3.0.3"
+  }
+}
