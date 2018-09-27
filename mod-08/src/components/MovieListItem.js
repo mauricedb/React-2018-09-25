@@ -2,7 +2,7 @@ import React from 'react';
 import propTypes from 'prop-types';
 
 function MovieListItem({ movie }) {
-  return <li>{movie.title}</li>;
+  return <li onClick={() => {}}>{movie.title}</li>;
 }
 
 MovieListItem.propTypes = {
