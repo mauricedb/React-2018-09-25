@@ -1,0 +1,20 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "mod-01-intro/first-app/package.json",
+        "mod-02-tooling/demo-app/package.json",
+        "mod-02-tooling/tools/package.json",
+        "mod-02-tooling/ts-app/package.json",
+        "mod-03-spa/package.json",
+        "mod-04-flux/package.json",
+        "mod-05-redux/package.json",
+        "mod-06-rxjs/package.json",
+        "mod-07-better-components/package.json",
+        "mod-08-unit-testing/package.json",
+        "mod-09-TypeScript intro/package.json",
+        "mod-10-Advanced-TypeScript/package.json"
+      ]
+    }
+  }
+}
